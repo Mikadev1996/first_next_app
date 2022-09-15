@@ -1,5 +1,6 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
+import Meta from "../../../components/Meta";
 
 
 const article = ({article}) => {
@@ -8,6 +9,7 @@ const article = ({article}) => {
 
     return (
         <div>
+            <Meta title={article.title} description={article.excerpt} />
             <h1>This is an article {article.id}</h1>
             <h3>{article.title}</h3>
             <p>{article.body}</p>
